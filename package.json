@@ -1,7 +1,7 @@
 {
 	"name": "nestjs-hot-shots",
 	"description": "Hot-shots Module for Nest.js Framework",
-	"version": "0.0.1",
+	"version": "1.0.0",
 	"scripts": {
 		"build": "rimraf -rf dist && tsc -p tsconfig.json",
 		"prepublish:npm": "npm run build",
@@ -37,8 +37,7 @@
 	"contributors": [
 		"Alexey Filippov <socket.someone@gmail.com>"
 	],
-	"dependencies": {
-	},
+	"dependencies": {},
 	"devDependencies": {
 		"@commitlint/cli": "15.0.0",
 		"@commitlint/config-angular": "15.0.0",
