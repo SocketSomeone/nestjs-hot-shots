@@ -1,5 +1,5 @@
 name: 🐛 Bug report
-description: Report incorrect or unexpected behavior of nestjs-hot-shots
+description: Report incorrect or unexpected behavior of nestjs-hot-
 labels: [bug, need repro]
 body:
   - type: textarea
@@ -24,7 +24,7 @@ body:
       description: Include a reproducible, minimal code sample. This will be automatically formatted into code, so no need for backticks.
       render: typescript
   - type: input
-    id: nestjs-version
+    id: Nestjs-version
     attributes:
       label: nest.js version
       description: Which version of nest.js are you using?

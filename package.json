@@ -1,5 +1,5 @@
 {
-	"name": "nest",
+	"name": "nestjs-hot-shots",
 	"description": "Hot-shots Module for Nest.js Framework",
 	"version": "0.0.1",
 	"scripts": {
