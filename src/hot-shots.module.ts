@@ -4,7 +4,7 @@ import {
 	HotShotsModuleOptions,
 	HotShotsOptionsFactory
 } from './hot-shots-options.interface';
-import { MODULE_OPTIONS } from './hot-shots.contants';
+import { MODULE_OPTIONS } from './hot-shots.constants';
 import { HotShotsService } from './hot-shots.service';
 
 @Module({

@@ -1,6 +1,6 @@
 import { StatsD } from 'hot-shots';
 import { Inject, Injectable } from '@nestjs/common';
-import { MODULE_OPTIONS } from './hot-shots.contants';
+import { MODULE_OPTIONS } from './hot-shots.constants';
 import { HotShotsModuleOptions } from './hot-shots-options.interface';
 
 @Injectable()
