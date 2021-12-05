@@ -1,6 +1,6 @@
 # NestJS Hot-shots ![npm](https://img.shields.io/npm/v/nestjs-hot-shots) ![LICENSE](https://img.shields.io/npm/l/nestjs-hot-shots) ![Downloads](https://img.shields.io/npm/dm/nestjs-hot-shots) ![Last Commit](https://img.shields.io/github/last-commit/SocketSomeone/nestjs-hot-shots)
 
-<img align="right" width="95" height="148" title="NestJS logotype" src="https://nestjs.com/img/logo-small.svg" />
+<img align="right" width="95" height="148" title="NestJS logotype" src="https://nestjs.com/img/logo-small.svg"  alt='Nest.JS logo'/>
 
 Hot-shots Module for Nest.js Framework. A Node.js client for Etsy's StatsD server, Datadog's DogStatsD server, and InfluxDB's Telegraf
 StatsD server.
@@ -37,14 +37,16 @@ import { HotShotsModule } from 'nestjs-hot-shots';
 
 @Module({
     imports: [
-      HotShotsModule.forRoot({
-          port: 8020,
-          globalTags: { env: process.env.NODE_ENV }
-      })
+        HotShotsModule.forRoot({
+            port: 8020,
+            globalTags: { env: process.env.NODE_ENV }
+        })
     ]
 })
-export class AppModule {}
+export class AppModule {
+}
 ```
+
 Then inject `HotShotsService` for use `hot-shots`:
 
 ```typescript
