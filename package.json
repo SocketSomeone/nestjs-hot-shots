@@ -25,7 +25,7 @@
 		"telegraf"
 	],
 	"license": "MIT",
-	"homepage": "https://github.com/SocketSomeone/nestjs-hot-shots/wiki",
+	"homepage": "https://github.com/SocketSomeone/nestjs-hot-shots/#readme",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/SocketSomeone/nestjs-hot-shots"
