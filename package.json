@@ -1,0 +1,74 @@
+{
+	"name": "nest",
+	"description": "Hot-shots Module for Nest.js Framework",
+	"version": "0.0.1",
+	"scripts": {
+		"build": "rimraf -rf dist && tsc -p tsconfig.json",
+		"prepublish:npm": "npm run build",
+		"publish:npm": "npm publish --access public",
+		"prepublish:dev": "npm run build",
+		"publish:dev": "npm publish --access public --tag dev",
+		"prepare": "husky install .github/husky",
+		"format": "prettier --write \"src/**/*.ts\"",
+		"lint": "eslint --ignore-path .gitignore {integration,src}/**/*.ts",
+		"release": "release-it"
+	},
+	"main": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"keywords": [
+		"nest",
+		"nestjs",
+		"nestjs-module",
+		"metrics",
+		"hot-shots",
+		"datadog",
+		"telegraf"
+	],
+	"license": "MIT",
+	"homepage": "https://github.com/SocketSomeone/nestjs-hot-shots/wiki",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/SocketSomeone/nestjs-hot-shots"
+	},
+	"bugs": {
+		"url": "https://github.com/SocketSomeone/nestjs-hot-shots/issues"
+	},
+	"author": "Alexey Filippov <socket.someone@gmail.com>",
+	"contributors": [
+		"Alexey Filippov <socket.someone@gmail.com>"
+	],
+	"dependencies": {
+	},
+	"devDependencies": {
+		"@commitlint/cli": "15.0.0",
+		"@commitlint/config-angular": "15.0.0",
+		"@favware/npm-deprecate": "^1.0.4",
+		"@nestjs/common": "8.2.3",
+		"@nestjs/core": "8.2.3",
+		"@types/node": "16.11.11",
+		"@typescript-eslint/eslint-plugin": "4.33.0",
+		"@typescript-eslint/parser": "4.33.0",
+		"hot-shots": "9.0.0",
+		"eslint": "7.32.0",
+		"eslint-config-prettier": "8.3.0",
+		"eslint-plugin-prettier": "4.0.0",
+		"husky": "7.0.4",
+		"prettier": "2.5.0",
+		"reflect-metadata": "0.1.13",
+		"release-it": "^14.11.8",
+		"rimraf": "3.0.2",
+		"rxjs": "7.4.0",
+		"typescript": "4.5.2"
+	},
+	"peerDependencies": {
+		"@nestjs/common": "^8.0.0",
+		"@nestjs/core": "^8.0.0",
+		"hot-shots": "^9.0.0",
+		"reflect-metadata": "^0.1.13",
+		"rxjs": "^7.2.0"
+	},
+	"engines": {
+		"node": ">=16.6.0",
+		"npm": ">=7.0.0"
+	}
+}
