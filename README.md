@@ -2,9 +2,11 @@
 
 <img align="right" width="95" height="148" title="NestJS logotype" src="https://nestjs.com/img/logo-small.svg" />
 
-Hot-shots Module for Nest.js Framework. A Node.js client for Etsy's StatsD server, Datadog's DogStatsD server, and InfluxDB's Telegraf StatsD server.
+Hot-shots Module for Nest.js Framework. A Node.js client for Etsy's StatsD server, Datadog's DogStatsD server, and InfluxDB's Telegraf
+StatsD server.
 
 **Feature**
+
 - TypeScript types
 - Telegraf support
 - Events
@@ -14,9 +16,8 @@ Hot-shots Module for Nest.js Framework. A Node.js client for Etsy's StatsD serve
 - Mock mode
 - Much more, including many bug fixes
 
-See the [hot-shots](https://www.npmjs.com/package/hot-shots) module for more details.
-
-For questions and support please use the [Issues](https://github.com/SocketSomeone/nestjs-hot-shots/issues/new?assignees=&labels=question&template=question.yml).
+For questions and support please use
+the [Issues](https://github.com/SocketSomeone/nestjs-hot-shots/issues/new?assignees=&labels=question&template=question.yml).
 
 ## Installation
 
@@ -28,7 +29,40 @@ $ pnpm add nestjs-hot-shots
 
 ## Usage
 
-WIP...
+Once the installation process is complete, we can import the `HotShotsModule` into the root `AppModule`:
+
+```typescript
+import { Module } from '@nestjs/common'
+import { HotShotsModule } from 'nestjs-hot-shots';
+
+@Module({
+    imports: [
+      HotShotsModule.forRoot({
+          port: 8020,
+          globalTags: { env: process.env.NODE_ENV }
+      })
+    ]
+})
+export class AppModule {}
+```
+Then inject `HotShotsService` for use `hot-shots`:
+
+```typescript
+import { Injectable } from '@nestjs/common';
+import { HotShotsService } from 'nestjs-hot-shots';
+
+@Injectable()
+export class AppMetrics {
+    public constructor(private readonly metrics: HotShotsService) {
+    }
+
+    public metricStuff() {
+        this.metrics.increment('somecounter');
+    }
+}
+```
+
+See the [hot-shots](https://www.npmjs.com/package/hot-shots) module for more details.
 
 ## Stay in touch
 
