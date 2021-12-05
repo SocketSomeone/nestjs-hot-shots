@@ -1,5 +1,5 @@
 import { ModuleMetadata, Type } from '@nestjs/common';
-import StatsDClient, { ClientOptions } from 'hot-shots';
+import { ClientOptions } from 'hot-shots';
 
 export type HotShotsModuleOptions = ClientOptions;
 
