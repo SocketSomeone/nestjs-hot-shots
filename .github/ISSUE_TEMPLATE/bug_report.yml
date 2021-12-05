@@ -1,5 +1,5 @@
 name: 🐛 Bug report
-description: Report incorrect or unexpected behavior of nestjs-hot-
+description: Report incorrect or unexpected behavior of nestjs-hot-shots
 labels: [bug, need repro]
 body:
   - type: textarea
