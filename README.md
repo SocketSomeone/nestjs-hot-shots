@@ -1,28 +1,34 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
+# NestJS Hot-Shots ![npm](https://img.shields.io/npm/v/nestjs-hot-shots) ![LICENSE](https://img.shields.io/npm/l/nestjs-hot-shots) ![Downloads](https://img.shields.io/npm/dm/nestjs-hot-shots) ![Last Commit](https://img.shields.io/github/last-commit/SocketSomeone/nestjs-hot-shots)
 
-<p align="center">
-    Hot-shots Module for <a href="https://nestjs.com/" target="_blank">Nest.js</a> Framework
-</p>
-<p align="center">
-    <a href='https://img.shields.io/npm/v/nestjs-hot-shots'><img src="https://img.shields.io/npm/v/nestjs-hot-shots" alt="NPM Version" /></a>
-    <a href='https://img.shields.io/npm/l/nestjs-hot-shots'><img src="https://img.shields.io/npm/l/nestjs-hot-shots" alt="NPM License" /></a>
-    <a href='https://img.shields.io/npm/dm/nestjs-hot-shots'><img src="https://img.shields.io/npm/dm/nestjs-hot-shots" alt="NPM Downloads" /></a>
-    <a href='https://img.shields.io/github/last-commit/SocketSomeone/nestjs-hot-shots'><img src="https://img.shields.io/github/last-commit/SocketSomeone/nestjs-hot-shots" alt="Last commit" /></a>
-</p>
+<img align="right" width="95" height="148" title="NestJS logotype" src="https://nestjs.com/img/logo-small.svg" />
 
-## About
+Hot-shots Module for Nest.js Framework. A Node.js client for Etsy's StatsD server, Datadog's DogStatsD server, and InfluxDB's Telegraf StatsD server.
+
+**Feature**
+- TypeScript types
+- Telegraf support
+- Events
+- Child clients
+- TCP/UDS Protocol support
+- Raw Stream Protocol support
+- Mock mode
+- Much more, including many bug fixes
+
+See the [hot-shots](https://www.npmjs.com/package/hot-shots) module for more details.
+
+For questions and support please use the [Issues](https://github.com/SocketSomeone/nestjs-hot-shots/issues/new?assignees=&labels=question&template=question.yml).
+
+## Installation
+
+```bash
+$ npm i nestjs-hot-shots
+$ yarn add nestjs-hot-shots
+$ pnpm add nestjs-hot-shots
+```
+
+## Usage
 
 WIP...
-
-## Getting started
-
-WIP...
-
-## Questions
-
-For questions and support please use the [Issues](https://github.com/SocketSomeone/nestjs-hot-shots/issues).
 
 ## Stay in touch
 
@@ -31,7 +37,4 @@ For questions and support please use the [Issues](https://github.com/SocketSomeo
 
 ## License
 
-Copyright (c) 2021-2021 Alexey Filippov
-
-This software is released under the terms of the MIT License. See
-the [LICENSE](https://github.com/SocketSomeone/nestjs-hot-shots/blob/main/LICENSE) file for further information.
+[MIT](https://github.com/SocketSomeone/nestjs-hot-shots/blob/master/LICENSE) © [Alexey Filippov](https://github.com/SocketSomeone)
