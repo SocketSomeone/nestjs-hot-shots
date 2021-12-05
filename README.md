@@ -1,4 +1,4 @@
-# NestJS Hot-Shots ![npm](https://img.shields.io/npm/v/nestjs-hot-shots) ![LICENSE](https://img.shields.io/npm/l/nestjs-hot-shots) ![Downloads](https://img.shields.io/npm/dm/nestjs-hot-shots) ![Last Commit](https://img.shields.io/github/last-commit/SocketSomeone/nestjs-hot-shots)
+# NestJS Hot-shots ![npm](https://img.shields.io/npm/v/nestjs-hot-shots) ![LICENSE](https://img.shields.io/npm/l/nestjs-hot-shots) ![Downloads](https://img.shields.io/npm/dm/nestjs-hot-shots) ![Last Commit](https://img.shields.io/github/last-commit/SocketSomeone/nestjs-hot-shots)
 
 <img align="right" width="95" height="148" title="NestJS logotype" src="https://nestjs.com/img/logo-small.svg" />
 
