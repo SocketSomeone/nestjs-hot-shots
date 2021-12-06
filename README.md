@@ -2,7 +2,7 @@
 
 <img align="right" width="95" height="148" title="NestJS logotype" src="https://nestjs.com/img/logo-small.svg"  alt='Nest.JS logo'/>
 
-Hot-shots Module for Nest.js Framework. A Node.js client for Etsy's StatsD server, Datadog's DogStatsD server, and InfluxDB's Telegraf
+Hot-shots Module for Nest.js Framework. A Node.js client for [Etsy](http://etsy.com)'s [StatsD](https://github.com/statsd/statsd) server, Datadog's [DogStatsD](https://docs.datadoghq.com/developers/dogstatsd/?tab=hostagent) server, and [InfluxDB's](https://github.com/influxdata/telegraf) Telegraf
 StatsD server.
 
 **Feature**
@@ -47,15 +47,15 @@ export class AppModule {
 }
 ```
 
-Then inject `HotShotsService` for use `hot-shots`:
+Then inject `StatsD` provider for use `hot-shots`:
 
 ```typescript
 import { Injectable } from '@nestjs/common';
-import { HotShotsService } from 'nestjs-hot-shots';
+import { StatsD } from 'hot-shots';
 
 @Injectable()
 export class AppMetrics {
-    public constructor(private readonly metrics: HotShotsService) {
+    public constructor(private readonly metrics: StatsD) {
     }
 
     public metricStuff() {
