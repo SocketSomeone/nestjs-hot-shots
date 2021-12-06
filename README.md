@@ -22,9 +22,9 @@ the [Issues](https://github.com/SocketSomeone/nestjs-hot-shots/issues/new?assign
 ## Installation
 
 ```bash
-$ npm i nestjs-hot-shots
-$ yarn add nestjs-hot-shots
-$ pnpm add nestjs-hot-shots
+$ npm i nestjs-hot-shots hot-shots
+$ yarn add nestjs-hot-shots hot-shots
+$ pnpm add nestjs-hot-shots hot-shots
 ```
 
 ## Usage
