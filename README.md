@@ -5,7 +5,7 @@
 Hot-shots Module for Nest.js Framework. A Node.js client for [Etsy](http://etsy.com)'s [StatsD](https://github.com/statsd/statsd) server, Datadog's [DogStatsD](https://docs.datadoghq.com/developers/dogstatsd/?tab=hostagent) server, and [InfluxDB's](https://github.com/influxdata/telegraf) Telegraf
 StatsD server.
 
-**Feature**
+**Features**
 
 - TypeScript types
 - Telegraf support
