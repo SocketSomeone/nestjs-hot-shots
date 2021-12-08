@@ -1,4 +1,4 @@
-import { DynamicModule, Module, Provider } from '@nestjs/common';
+import { DynamicModule, Global, Module, Provider } from '@nestjs/common';
 import {
 	HotShotsModuleAsyncOptions,
 	HotShotsModuleOptions,
@@ -7,6 +7,7 @@ import {
 import { HOT_SHOTS_MODULE_OPTIONS } from './hot-shots.constants';
 import { StatsD } from 'hot-shots';
 
+@Global()
 @Module({})
 export class HotShotsModule {
 	public static forRoot(options: HotShotsModuleOptions): DynamicModule {
