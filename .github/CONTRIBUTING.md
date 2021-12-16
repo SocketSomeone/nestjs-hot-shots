@@ -6,11 +6,11 @@ is a great boon to your development process.
 
 ## Setup
 
-You will need [Node.js](http://nodejs.org) **version 16+**, and [npm](https://www.npmjs.com/).
+You will need [Node.js](http://nodejs.org) **version 12+**, and [npm](https://www.npmjs.com/).
 
 To get ready to work on the codebase, please do the following:
 
-1. Fork & clone the repository, and make sure you're on the **main** branch
+1. Fork & clone the repository, and make sure you're on the **master** branch
 2. Run `npm ci`
 3. Code your heart out!
 4. Run `npm lint` to run ESLint ensures changes are valid
