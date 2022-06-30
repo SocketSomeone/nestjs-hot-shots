@@ -49,7 +49,7 @@
 		"@typescript-eslint/parser": "5.30.0",
 		"eslint": "8.18.0",
 		"eslint-config-prettier": "8.5.0",
-		"eslint-plugin-prettier": "4.1.0",
+		"eslint-plugin-prettier": "4.2.1",
 		"hot-shots": "9.1.0",
 		"husky": "8.0.1",
 		"prettier": "2.7.1",
