@@ -51,7 +51,7 @@
 		"eslint-config-prettier": "9.1.0",
 		"eslint-plugin-prettier": "5.2.1",
 		"hot-shots": "10.2.1",
-		"husky": "9.1.6",
+		"husky": "9.1.7",
 		"prettier": "3.3.3",
 		"reflect-metadata": "0.2.2",
 		"release-it": "17.10.0",
