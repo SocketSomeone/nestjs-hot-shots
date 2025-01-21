@@ -10,7 +10,7 @@
 		"publish:dev": "npm publish --access public --tag dev",
 		"prepare": "husky",
 		"format": "prettier --write \"src/**/*.ts\"",
-		"lint": "eslint --ignore-path .gitignore {integration,src}/**/*.ts",
+		"lint": "eslint --ignore-pattern .gitignore {integration,src}/**/*.ts",
 		"test": "echo test"
 	},
 	"main": "./dist/index.js",
@@ -63,8 +63,8 @@
 		"typescript-eslint": "^8.21.0"
 	},
 	"peerDependencies": {
-		"@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0",
-		"@nestjs/core": "^8.0.0 || ^9.0.0 || ^10.0.0",
+		"@nestjs/common": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
+		"@nestjs/core": "^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0",
 		"hot-shots": "^10.0.0",
 		"reflect-metadata": "^0.2.2",
 		"rxjs": "^7.8.1"
