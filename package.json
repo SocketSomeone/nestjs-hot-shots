@@ -54,7 +54,7 @@
 		"globals": "^15.14.0",
 		"hot-shots": "10.2.1",
 		"husky": "9.1.7",
-		"prettier": "3.4.2",
+		"prettier": "3.5.0",
 		"reflect-metadata": "0.2.2",
 		"release-it": "18.1.2",
 		"rimraf": "6.0.1",
