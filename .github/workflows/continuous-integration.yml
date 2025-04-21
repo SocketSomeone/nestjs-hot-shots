@@ -29,4 +29,9 @@ jobs:
         run: yarn build
 
       - name: Run Tests
-        run: yarn test --ci --passWithNoTests
+        run: yarn test --ci --passWithNoTests --coverage
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v5
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
