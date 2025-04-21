@@ -20,30 +20,30 @@ describe('GaugeCollector', () => {
 	});
 
 	it('should create GaugeCollector', () => {
-		const instance = metricsService.getGauge('test.metric');
+		const instance = metricsService.getGauge('test_metric');
 		expect(instance).toBeDefined();
 		expect(instance).toBeInstanceOf(GaugeCollector);
 	});
 
 	it('should set gauge value', () => {
-		const instance = metricsService.getGauge('test.metric');
+		const instance = metricsService.getGauge('test_metric');
 		instance.set(10);
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:10|g');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:10|g');
 	});
 
 	it('should set gauge value with tags', () => {
-		const instance = metricsService.getGauge('test.metric');
+		const instance = metricsService.getGauge('test_metric');
 		instance.set(10, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:10|g|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:10|g|#tag1:value1,tag2:value2');
 	});
 
 	it('should set gauge value with merge tags', () => {
-		const instance = metricsService.getGauge('test.metric', { tags: { tag1: 'value1' } });
+		const instance = metricsService.getGauge('test_metric', { tags: { tag1: 'value1' } });
 		instance.set(10, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:10|g|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:10|g|#tag1:value1,tag2:value2');
 	});
 
 	afterEach(() => {

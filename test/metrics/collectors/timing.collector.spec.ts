@@ -20,30 +20,30 @@ describe('TimingCollector', () => {
 	});
 
 	it('should create TimingCollector', () => {
-		const instance = metricsService.getTiming('test.metric');
+		const instance = metricsService.getTiming('test_metric');
 		expect(instance).toBeDefined();
 		expect(instance).toBeInstanceOf(TimingCollector);
 	});
 
 	it('should record timing value', () => {
-		const instance = metricsService.getTiming('test.metric');
+		const instance = metricsService.getTiming('test_metric');
 		instance.record(10);
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:10|ms');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:10|ms');
 	});
 
 	it('should record timing value with tags', () => {
-		const instance = metricsService.getTiming('test.metric');
+		const instance = metricsService.getTiming('test_metric');
 		instance.record(10, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:10|ms|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:10|ms|#tag1:value1,tag2:value2');
 	});
 
 	it('should record timing value with merge tags', () => {
-		const instance = metricsService.getTiming('test.metric', { tags: { tag1: 'value1' } });
+		const instance = metricsService.getTiming('test_metric', { tags: { tag1: 'value1' } });
 		instance.record(10, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:10|ms|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:10|ms|#tag1:value1,tag2:value2');
 	});
 
 	afterEach(() => {

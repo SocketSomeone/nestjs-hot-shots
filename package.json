@@ -39,7 +39,9 @@
 	"contributors": [
 		"Alexey Filippov <socket.someone@gmail.com>"
 	],
-	"dependencies": {},
+	"dependencies": {
+		"response-time": "^2.3.3"
+	},
 	"devDependencies": {
 		"@commitlint/cli": "19.8.0",
 		"@commitlint/config-angular": "19.8.0",
@@ -48,10 +50,13 @@
 		"@favware/npm-deprecate": "2.0.0",
 		"@nestjs/common": "11.0.20",
 		"@nestjs/core": "11.0.20",
+		"@nestjs/platform-express": "^11.0.20",
 		"@nestjs/testing": "^11.0.20",
 		"@release-it/conventional-changelog": "^10.0.0",
 		"@types/jest": "^29.5.14",
 		"@types/node": "22.14.1",
+		"@types/response-time": "^2.3.8",
+		"@types/supertest": "^6.0.3",
 		"eslint": "^9.18.0",
 		"eslint-config-prettier": "10.1.2",
 		"eslint-plugin-import": "^2.31.0",
@@ -65,6 +70,7 @@
 		"release-it": "18.1.2",
 		"rimraf": "6.0.1",
 		"rxjs": "7.8.2",
+		"supertest": "^7.1.0",
 		"ts-jest": "^29.3.2",
 		"typescript": "5.8.3",
 		"typescript-eslint": "^8.21.0"

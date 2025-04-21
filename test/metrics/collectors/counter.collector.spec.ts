@@ -21,34 +21,34 @@ describe('CounterCollector', () => {
 	});
 
 	it('should create CounterCollector', () => {
-		const instance = metricsService.getCounter('test.metric');
+		const instance = metricsService.getCounter('test_metric');
 		expect(instance).toBeDefined();
 		expect(instance).toBeInstanceOf(CounterCollector);
 	});
 
 	it('should increment counter', () => {
-		const instance = metricsService.getCounter('test.metric');
+		const instance = metricsService.getCounter('test_metric');
 		instance.add(1);
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:1|c');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:1|c');
 	});
 
 	it('should increment counter with tags', () => {
-		const instance = metricsService.getCounter('test.metric');
+		const instance = metricsService.getCounter('test_metric');
 		instance.add(1, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:1|c|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:1|c|#tag1:value1,tag2:value2');
 	});
 
 	it('should increment counter with merge tags', () => {
-		const instance = metricsService.getCounter('test.metric', { tags: { tag1: 'value1' } });
+		const instance = metricsService.getCounter('test_metric', { tags: { tag1: 'value1' } });
 		instance.add(1, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test.metric:1|c|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer[0]).toBe('test_metric:1|c|#tag1:value1,tag2:value2');
 	});
 
 	it('should throw error when incrementing with negative value', () => {
-		const instance = metricsService.getCounter('test.metric');
+		const instance = metricsService.getCounter('test_metric');
 		expect(() => instance.add(-1)).toThrowError('Counter value cannot be negative');
 	});
 
