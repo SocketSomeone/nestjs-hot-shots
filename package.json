@@ -13,7 +13,8 @@
 		"lint": "eslint --ignore-pattern .gitignore {integration,src}/**/*.ts",
 		"test": "jest",
 		"test:watch": "jest --watch",
-		"test:cov": "jest --coverage"
+		"test:cov": "jest --coverage",
+		"test:ci": "jest --ci --passWithNoTests --coverage"
 	},
 	"main": "./dist/index.js",
 	"types": "./dist/index.d.ts",
