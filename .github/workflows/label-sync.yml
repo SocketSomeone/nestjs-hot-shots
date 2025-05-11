@@ -9,9 +9,11 @@ on:
       - master
     paths:
       - '.github/labels.yml'
+      - '.github/workflows/label-sync.yml'
   pull_request:
     paths:
       - '.github/labels.yml'
+      - '.github/workflows/label-sync.yml'
 
 permissions:
   contents: read
