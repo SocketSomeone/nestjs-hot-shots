@@ -49,7 +49,7 @@ describe('CounterCollector', () => {
 
 	it('should throw error when incrementing with negative value', () => {
 		const instance = metricsService.getCounter('test_metric');
-		expect(() => instance.add(-1)).toThrowError('Counter value cannot be negative');
+		expect(() => instance.add(-1)).toThrow('Counter value cannot be negative');
 	});
 
 
