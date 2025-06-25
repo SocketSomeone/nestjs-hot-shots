@@ -66,7 +66,7 @@
 		"hot-shots": "11.1.0",
 		"husky": "9.1.7",
 		"jest": "^30.0.0",
-		"prettier": "3.6.0",
+		"prettier": "3.6.1",
 		"reflect-metadata": "0.2.2",
 		"release-it": "19.0.3",
 		"rimraf": "6.0.1",
