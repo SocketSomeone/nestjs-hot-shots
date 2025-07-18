@@ -59,7 +59,7 @@
 		"@types/response-time": "^2.3.8",
 		"@types/supertest": "^6.0.3",
 		"eslint": "^9.18.0",
-		"eslint-config-prettier": "10.1.5",
+		"eslint-config-prettier": "10.1.8",
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-prettier": "5.5.1",
 		"globals": "^16.0.0",
