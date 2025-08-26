@@ -63,7 +63,7 @@
 		"eslint-plugin-import": "^2.31.0",
 		"eslint-plugin-prettier": "5.5.4",
 		"globals": "^16.0.0",
-		"hot-shots": "11.1.1",
+		"hot-shots": "11.2.0",
 		"husky": "9.1.7",
 		"jest": "^30.0.0",
 		"prettier": "3.6.2",
