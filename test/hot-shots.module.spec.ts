@@ -1,14 +1,12 @@
 const StatsDMock = jest.fn();
 
 jest.mock('hot-shots', () => ({
-	StatsD: StatsDMock,
-}))
-
+	StatsD: StatsDMock
+}));
 
 import { Test } from '@nestjs/testing';
 import { HotShotsModule } from '../src';
 import { StatsD } from 'hot-shots';
-
 
 describe('HotShotsModule', () => {
 	beforeEach(() => {
@@ -19,7 +17,7 @@ describe('HotShotsModule', () => {
 		const options = { host: '127.0.0.1', mock: true };
 
 		const moduleRef = await Test.createTestingModule({
-			imports: [HotShotsModule.forRoot(options)],
+			imports: [HotShotsModule.forRoot(options)]
 		}).compile();
 
 		const statsDProvider = moduleRef.get(StatsD);

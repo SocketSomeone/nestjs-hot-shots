@@ -49,4 +49,4 @@ describe('HistogramCollector', () => {
 	afterEach(() => {
 		jest.clearAllMocks();
 	});
-})
+});

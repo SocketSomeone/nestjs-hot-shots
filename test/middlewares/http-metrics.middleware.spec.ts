@@ -9,11 +9,8 @@ import { Response } from 'express';
 @Controller()
 class AppController {
 	@Get('/:statusCode')
-	getHello(
-		@Res() res: Response,
-		@Param('statusCode') statusCode: string
-	) {
-		return res.status(parseInt(statusCode)).json([])
+	getHello(@Res() res: Response, @Param('statusCode') statusCode: string) {
+		return res.status(parseInt(statusCode)).json([]);
 	}
 }
 
@@ -26,7 +23,7 @@ describe('HttpMetricsMiddleware', () => {
 	beforeAll(async () => {
 		const moduleRef = await Test.createTestingModule({
 			imports: [HotShotsModule.forRoot({ mock: true })],
-			controllers: [AppController],
+			controllers: [AppController]
 		}).compile();
 
 		app = moduleRef.createNestApplication();
@@ -61,10 +58,12 @@ describe('HttpMetricsMiddleware', () => {
 				.get('/200')
 				.expect(200)
 				.then(res => {
-					expect(statsD.mockBuffer[0]).toBe('http_server_request_count:1|c|#method:GET,path:/_statusCode');
-				})
-		})
-	})
+					expect(statsD.mockBuffer[0]).toBe(
+						'http_server_request_count:1|c|#method:GET,path:/_statusCode'
+					);
+				});
+		});
+	});
 
 	describe('metric: http.server.response.count', () => {
 		it('successfully request records', async () => {
@@ -72,10 +71,12 @@ describe('HttpMetricsMiddleware', () => {
 				.get('/200')
 				.expect(200)
 				.then(res => {
-					expect(statsD.mockBuffer[3]).toBe('http_server_response_count:1|c|#method:GET,status:200,path:/_statusCode');
-				})
-		})
-	})
+					expect(statsD.mockBuffer[3]).toBe(
+						'http_server_response_count:1|c|#method:GET,status:200,path:/_statusCode'
+					);
+				});
+		});
+	});
 
 	describe('metric: http.server.abort.count', () => {});
 
@@ -94,9 +95,9 @@ describe('HttpMetricsMiddleware', () => {
 				.expect(500)
 				.then(res => {
 					expect(statsD.mockBuffer[5]).toBe('http_server_response_error_count:1|c');
-				})
-		})
-	})
+				});
+		});
+	});
 
 	describe('metric: http.client.request.error.count', () => {
 		it('error request records', async () => {
@@ -104,8 +105,8 @@ describe('HttpMetricsMiddleware', () => {
 				.get('/invalid/route')
 				.then(res => {
 					expect(statsD.mockBuffer[5]).toBe('http_client_request_error_count:1|c');
-				})
-		})
+				});
+		});
 	});
 
 	afterEach(() => {

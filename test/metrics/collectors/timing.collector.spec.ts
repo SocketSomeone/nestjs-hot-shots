@@ -49,4 +49,4 @@ describe('TimingCollector', () => {
 	afterEach(() => {
 		jest.clearAllMocks();
 	});
-})
+});

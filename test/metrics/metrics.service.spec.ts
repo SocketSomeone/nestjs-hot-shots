@@ -4,7 +4,8 @@ import {
 	HistogramCollector,
 	HotShotsModule,
 	MetricsService,
-	TimingCollector, UpDownCounterCollector
+	TimingCollector,
+	UpDownCounterCollector
 } from '../../src';
 import { Test } from '@nestjs/testing';
 
@@ -58,5 +59,5 @@ describe('MetricsService', () => {
 
 	afterEach(() => {
 		jest.clearAllMocks();
-	})
+	});
 });

@@ -3,8 +3,7 @@ import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
 describe('CounterCollector', () => {
-	let statsD: StatsD,
-		metricsService: MetricsService;
+	let statsD: StatsD, metricsService: MetricsService;
 
 	beforeEach(async () => {
 		const moduleRef = await Test.createTestingModule({
@@ -13,7 +12,7 @@ describe('CounterCollector', () => {
 
 		statsD = moduleRef.get(StatsD);
 		metricsService = moduleRef.get(MetricsService);
-	})
+	});
 
 	it('should be defined', () => {
 		expect(statsD).toBeDefined();
@@ -52,8 +51,7 @@ describe('CounterCollector', () => {
 		expect(() => instance.add(-1)).toThrow('Counter value cannot be negative');
 	});
 
-
 	afterEach(() => {
 		jest.clearAllMocks();
-	})
-})
+	});
+});
