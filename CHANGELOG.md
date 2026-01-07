@@ -1,5 +1,19 @@
 # Changelog
 
+## [4.0.0](https://github.com/SocketSomeone/nestjs-hot-shots/compare/3.1.1...4.0.0) (2026-01-07)
+
+### Features
+
+* bump peer deps ([0ad052c](https://github.com/SocketSomeone/nestjs-hot-shots/commit/0ad052c8109b6eb4cbb3fdfeae935b0077122744))
+
+### Bug Fixes
+
+* remove project field due project service dominating ([c509955](https://github.com/SocketSomeone/nestjs-hot-shots/commit/c509955934e2a7cb0e371f9016373b65a5dcf918))
+
+### Styling
+
+* lint ([add2053](https://github.com/SocketSomeone/nestjs-hot-shots/commit/add20532ff3baea21c4615afc8c8b2b092d42473))
+
 ## [3.1.1](https://github.com/SocketSomeone/nestjs-hot-shots/compare/3.1.0...3.1.1) (2025-08-26)
 
 ### Bug Fixes
