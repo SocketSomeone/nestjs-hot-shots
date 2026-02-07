@@ -59,7 +59,7 @@ describe('HttpMetricsMiddleware', () => {
 				.expect(200)
 				.then(res => {
 					expect(statsD.mockBuffer[0]).toBe(
-						'http_server_request_count:1|c|#method:GET,path:/_statusCode'
+						'http_server_request_count:1|c|#method:GET,path:/:statusCode'
 					);
 				});
 		});
@@ -72,7 +72,7 @@ describe('HttpMetricsMiddleware', () => {
 				.expect(200)
 				.then(res => {
 					expect(statsD.mockBuffer[3]).toBe(
-						'http_server_response_count:1|c|#method:GET,status:200,path:/_statusCode'
+						'http_server_response_count:1|c|#method:GET,status:200,path:/:statusCode'
 					);
 				});
 		});
