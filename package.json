@@ -55,7 +55,7 @@
 		"@nestjs/testing": "^11.0.20",
 		"@release-it/conventional-changelog": "^10.0.0",
 		"@types/jest": "^30.0.0",
-		"@types/node": "25.2.2",
+		"@types/node": "25.2.3",
 		"@types/response-time": "^2.3.8",
 		"@types/supertest": "^6.0.3",
 		"eslint": "^10.0.0",
