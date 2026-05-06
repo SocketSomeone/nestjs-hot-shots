@@ -1,5 +1,5 @@
 import * as urlParser from 'url';
-import * as responseTime from 'response-time';
+import responseTime from 'response-time';
 import { Injectable, NestMiddleware } from '@nestjs/common';
 import { MetricsService } from '../metrics';
 

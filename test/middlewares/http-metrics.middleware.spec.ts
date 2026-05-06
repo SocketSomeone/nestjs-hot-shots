@@ -3,7 +3,7 @@ import { Controller, Get, INestApplication, Param, Res } from '@nestjs/common';
 import { HotShotsModule, MetricsService } from '../../src';
 import { Test } from '@nestjs/testing';
 import { HttpMetricsMiddleware } from '../../src';
-import * as request from 'supertest';
+import request from 'supertest';
 import { Response } from 'express';
 
 @Controller()
