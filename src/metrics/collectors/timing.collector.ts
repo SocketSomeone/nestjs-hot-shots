@@ -1,5 +1,6 @@
-import { BaseCollector } from './base.collector';
 import { Tags } from 'hot-shots';
+
+import { BaseCollector } from './base.collector';
 
 export class TimingCollector extends BaseCollector {
 	/**

@@ -1,3 +1,5 @@
+import { Test } from '@nestjs/testing';
+
 import {
 	CounterCollector,
 	GaugeCollector,
@@ -7,7 +9,6 @@ import {
 	TimingCollector,
 	UpDownCounterCollector
 } from '../../src';
-import { Test } from '@nestjs/testing';
 
 describe('MetricsService', () => {
 	let service: MetricsService;

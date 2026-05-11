@@ -1,9 +1,10 @@
-import { UpDownCounterCollector, HotShotsModule, MetricsService } from '../../../src';
 import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
+import { UpDownCounterCollector, HotShotsModule, MetricsService } from '../../../src';
+
 describe('UpDownCounterCollector', () => {
-	let statsD: StatsD, metricsService: MetricsService;
+	let metricsService: MetricsService, statsD: StatsD;
 
 	beforeEach(async () => {
 		const moduleRef = await Test.createTestingModule({

@@ -31,7 +31,7 @@
 	"homepage": "https://github.com/SocketSomeone/nestjs-hot-shots/#readme",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/SocketSomeone/nestjs-hot-shots"
+		"url": "git+https://github.com/SocketSomeone/nestjs-hot-shots.git"
 	},
 	"bugs": {
 		"url": "https://github.com/SocketSomeone/nestjs-hot-shots/issues"
@@ -60,7 +60,7 @@
 		"@types/supertest": "^7.2.0",
 		"eslint": "^10.0.0",
 		"eslint-config-prettier": "10.1.8",
-		"eslint-plugin-import": "^2.31.0",
+		"eslint-plugin-perfectionist": "^5.9.0",
 		"eslint-plugin-prettier": "5.5.5",
 		"globals": "^17.0.0",
 		"hot-shots": "14.3.1",

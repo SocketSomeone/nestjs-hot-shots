@@ -1,10 +1,11 @@
-import { StatsD } from 'hot-shots';
 import { Controller, Get, INestApplication, Param, Res } from '@nestjs/common';
-import { HotShotsModule, MetricsService } from '../../src';
 import { Test } from '@nestjs/testing';
-import { HttpMetricsMiddleware } from '../../src';
-import request from 'supertest';
+import { StatsD } from 'hot-shots';
 import { Response } from 'express';
+import request from 'supertest';
+
+import { HotShotsModule, MetricsService } from '../../src';
+import { HttpMetricsMiddleware } from '../../src';
 
 @Controller()
 class AppController {

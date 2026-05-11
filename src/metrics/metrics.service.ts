@@ -1,5 +1,6 @@
 import { Injectable, Logger, Type } from '@nestjs/common';
 import { StatsD } from 'hot-shots';
+
 import {
 	BaseCollector,
 	CounterCollector,

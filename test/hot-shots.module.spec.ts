@@ -5,8 +5,9 @@ jest.mock('hot-shots', () => ({
 }));
 
 import { Test } from '@nestjs/testing';
-import { HotShotsModule } from '../src';
 import { StatsD } from 'hot-shots';
+
+import { HotShotsModule } from '../src';
 
 describe('HotShotsModule', () => {
 	beforeEach(() => {

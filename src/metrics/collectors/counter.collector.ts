@@ -1,5 +1,6 @@
-import { BaseCollector } from './base.collector';
 import { RuntimeException } from '@nestjs/core/errors/exceptions';
+
+import { BaseCollector } from './base.collector';
 import { Tags } from '../interfaces';
 
 export class CounterCollector extends BaseCollector {

@@ -1,4 +1,5 @@
 import { StatsD, Tags } from 'hot-shots';
+
 import { CollectorOptions } from '../interfaces';
 
 export abstract class BaseCollector {

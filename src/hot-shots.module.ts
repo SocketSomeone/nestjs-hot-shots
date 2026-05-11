@@ -1,7 +1,8 @@
 import { Global, Module } from '@nestjs/common';
-import { StatsDProvider } from './providers';
+
 import { ConfigurableModuleClass } from './hot-shots.module-definition';
 import { MetricsService } from './metrics/metrics.service';
+import { StatsDProvider } from './providers';
 
 @Global()
 @Module({

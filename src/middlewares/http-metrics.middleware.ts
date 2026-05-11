@@ -1,6 +1,7 @@
-import * as urlParser from 'url';
-import responseTime from 'response-time';
 import { Injectable, NestMiddleware } from '@nestjs/common';
+import responseTime from 'response-time';
+import * as urlParser from 'url';
+
 import { MetricsService } from '../metrics';
 
 @Injectable()
