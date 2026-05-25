@@ -1,5 +1,15 @@
 # Changelog
 
+## [4.1.0](https://github.com/SocketSomeone/nestjs-hot-shots/compare/4.0.0...4.1.0) (2026-05-25)
+
+### Features
+
+* migrate to ts 6 ([3d16519](https://github.com/SocketSomeone/nestjs-hot-shots/commit/3d16519b15ae90883f7a39595ea0bc076b0b4f3b))
+
+### Refactor
+
+* migrate to npm ([b756269](https://github.com/SocketSomeone/nestjs-hot-shots/commit/b7562691bb3fce13fa915424e45999e9087d4ddf))
+
 ## [4.0.0](https://github.com/SocketSomeone/nestjs-hot-shots/compare/3.1.1...4.0.0) (2026-01-07)
 
 ### Features
