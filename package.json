@@ -45,17 +45,17 @@
 		"tslib": "^2.8.1"
 	},
 	"devDependencies": {
-		"@commitlint/cli": "21.2.0",
+		"@commitlint/cli": "21.2.1",
 		"@commitlint/config-angular": "21.2.0",
 		"@eslint/eslintrc": "^3.2.0",
 		"@eslint/js": "^10.0.1",
-		"@nestjs/common": "11.1.27",
-		"@nestjs/core": "11.1.27",
+		"@nestjs/common": "11.1.28",
+		"@nestjs/core": "11.1.28",
 		"@nestjs/platform-express": "^11.0.20",
 		"@nestjs/testing": "^11.0.20",
 		"@release-it/conventional-changelog": "^11.0.0",
 		"@types/jest": "^30.0.0",
-		"@types/node": "26.1.0",
+		"@types/node": "26.1.1",
 		"@types/response-time": "^2.3.8",
 		"@types/supertest": "^7.2.0",
 		"eslint": "^10.0.0",
@@ -73,7 +73,7 @@
 		"rxjs": "7.8.2",
 		"supertest": "^7.1.0",
 		"ts-jest": "^29.3.2",
-		"typescript": "6.0.3",
+		"typescript": "7.0.2",
 		"typescript-eslint": "^8.21.0"
 	},
 	"peerDependencies": {
