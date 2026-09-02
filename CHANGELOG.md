@@ -1,5 +1,7 @@
 # Changelog
 
+## [5.0.0](https://github.com/SocketSomeone/nestjs-hot-shots/compare/4.1.1...5.0.0) (2026-09-02)
+
 ## [4.1.1](https://github.com/SocketSomeone/nestjs-hot-shots/compare/4.0.0...4.1.1) (2026-05-25)
 
 ### Features

@@ -1,7 +1,7 @@
 {
 	"name": "nestjs-hot-shots",
 	"description": "Hot-shots Module for Nest.js Framework",
-	"version": "4.1.1",
+	"version": "5.0.0",
 	"type": "module",
 	"scripts": {
 		"build": "rimraf dist && tsc -p tsconfig.build.json",
