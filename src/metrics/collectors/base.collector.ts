@@ -10,17 +10,6 @@ export abstract class BaseCollector {
 	) {}
 
 	protected getMergedTags(tags?: Tags): Tags {
-		if (Array.isArray(tags)) {
-			const optionTags = Object.entries(this.options.tags).map(
-				([key, value]) => `${key}:${value}`
-			);
-
-			return [...optionTags, ...tags];
-		}
-
-		return {
-			...this.options.tags,
-			...tags
-		};
+		return Object.assign({}, this.options.tags, tags || {});
 	}
 }
