@@ -10,6 +10,11 @@ export abstract class BaseCollector {
 	) {}
 
 	protected getMergedTags(tags?: Tags): Tags {
-		return Object.assign({}, this.options.tags, tags || {});
+		const spreadableTags: object = tags || {};
+
+		return {
+			...this.options.tags,
+			...spreadableTags
+		};
 	}
 }
