@@ -8,8 +8,8 @@ import {
 	HistogramCollector,
 	TimingCollector,
 	UpDownCounterCollector
-} from './collectors';
-import { CollectorOptions } from './interfaces';
+} from './collectors/index.js';
+import { CollectorOptions } from './interfaces/index.js';
 
 @Injectable()
 export class MetricsService {

@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
-import { HistogramCollector, HotShotsModule, MetricsService } from '../../../src';
+import { HistogramCollector, HotShotsModule, MetricsService } from '../../../src/index.js';
 
 describe('HistogramCollector', () => {
 	let metricsService: MetricsService, statsD: StatsD;
@@ -30,24 +30,24 @@ describe('HistogramCollector', () => {
 		const instance = metricsService.getHistogram('test_metric');
 		instance.record(10);
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|h');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|h');
 	});
 
 	it('should record histogram value with tags', () => {
 		const instance = metricsService.getHistogram('test_metric');
 		instance.record(10, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|h|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|h|#tag1:value1,tag2:value2');
 	});
 
 	it('should record histogram value with merge tags', () => {
 		const instance = metricsService.getHistogram('test_metric', { tags: { tag1: 'value1' } });
 		instance.record(10, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|h|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|h|#tag1:value1,tag2:value2');
 	});
 
 	afterEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

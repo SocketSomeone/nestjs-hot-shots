@@ -1,6 +1,6 @@
 import { StatsD, Tags } from 'hot-shots';
 
-import { CollectorOptions } from '../interfaces';
+import { CollectorOptions } from '../interfaces/index.js';
 
 export abstract class BaseCollector {
 	public constructor(
@@ -10,9 +10,11 @@ export abstract class BaseCollector {
 	) {}
 
 	protected getMergedTags(tags?: Tags): Tags {
+		const spreadableTags: object = tags || {};
+
 		return {
 			...this.options.tags,
-			...(tags || {})
+			...spreadableTags
 		};
 	}
 }

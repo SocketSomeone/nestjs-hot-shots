@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
-import { GaugeCollector, HotShotsModule, MetricsService } from '../../../src';
+import { GaugeCollector, HotShotsModule, MetricsService } from '../../../src/index.js';
 
 describe('GaugeCollector', () => {
 	let metricsService: MetricsService, statsD: StatsD;
@@ -30,24 +30,24 @@ describe('GaugeCollector', () => {
 		const instance = metricsService.getGauge('test_metric');
 		instance.set(10);
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|g');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|g');
 	});
 
 	it('should set gauge value with tags', () => {
 		const instance = metricsService.getGauge('test_metric');
 		instance.set(10, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|g|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|g|#tag1:value1,tag2:value2');
 	});
 
 	it('should set gauge value with merge tags', () => {
 		const instance = metricsService.getGauge('test_metric', { tags: { tag1: 'value1' } });
 		instance.set(10, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|g|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|g|#tag1:value1,tag2:value2');
 	});
 
 	afterEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

@@ -4,8 +4,8 @@ import { StatsD } from 'hot-shots';
 import { Response } from 'express';
 import request from 'supertest';
 
-import { HotShotsModule, MetricsService } from '../../src';
-import { HttpMetricsMiddleware } from '../../src';
+import { HotShotsModule, MetricsService } from '../../src/index.js';
+import { HttpMetricsMiddleware } from '../../src/index.js';
 
 @Controller()
 class AppController {
@@ -44,13 +44,13 @@ describe('HttpMetricsMiddleware', () => {
 	});
 
 	it('should call metricsService.getCounter and metricsService.getHistogram', () => {
-		jest.spyOn(metricsService, 'getCounter');
-		jest.spyOn(metricsService, 'getHistogram');
+		const getCounterSpy = vi.spyOn(metricsService, 'getCounter');
+		const getHistogramSpy = vi.spyOn(metricsService, 'getHistogram');
 
-		const middleware = new HttpMetricsMiddleware(metricsService);
+		new HttpMetricsMiddleware(metricsService);
 
-		expect(metricsService.getCounter).toHaveBeenCalledWith('http_server_request_count');
-		expect(metricsService.getHistogram).toHaveBeenCalledTimes(3);
+		expect(getCounterSpy).toHaveBeenCalledWith('http_server_request_count');
+		expect(getHistogramSpy).toHaveBeenCalledTimes(3);
 	});
 
 	describe('metric: http.server.request.count', () => {
@@ -58,8 +58,8 @@ describe('HttpMetricsMiddleware', () => {
 			return request(app.getHttpServer())
 				.get('/200')
 				.expect(200)
-				.then(res => {
-					expect(statsD.mockBuffer[0]).toBe(
+				.then(() => {
+					expect(statsD.mockBuffer![0]).toBe(
 						'http_server_request_count:1|c|#method:GET,path:/:statusCode'
 					);
 				});
@@ -71,8 +71,8 @@ describe('HttpMetricsMiddleware', () => {
 			return request(app.getHttpServer())
 				.get('/200')
 				.expect(200)
-				.then(res => {
-					expect(statsD.mockBuffer[3]).toBe(
+				.then(() => {
+					expect(statsD.mockBuffer![3]).toBe(
 						'http_server_response_count:1|c|#method:GET,status:200,path:/:statusCode'
 					);
 				});
@@ -94,8 +94,8 @@ describe('HttpMetricsMiddleware', () => {
 			return request(app.getHttpServer())
 				.get('/500')
 				.expect(500)
-				.then(res => {
-					expect(statsD.mockBuffer[5]).toBe('http_server_response_error_count:1|c');
+				.then(() => {
+					expect(statsD.mockBuffer![5]).toBe('http_server_response_error_count:1|c');
 				});
 		});
 	});
@@ -104,14 +104,14 @@ describe('HttpMetricsMiddleware', () => {
 		it('error request records', async () => {
 			return request(app.getHttpServer())
 				.get('/invalid/route')
-				.then(res => {
-					expect(statsD.mockBuffer[5]).toBe('http_client_request_error_count:1|c');
+				.then(() => {
+					expect(statsD.mockBuffer![5]).toBe('http_client_request_error_count:1|c');
 				});
 		});
 	});
 
 	afterEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 		statsD.mockBuffer = [];
 	});
 

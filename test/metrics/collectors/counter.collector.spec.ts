@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
-import { CounterCollector, HotShotsModule, MetricsService } from '../../../src';
+import { CounterCollector, HotShotsModule, MetricsService } from '../../../src/index.js';
 
 describe('CounterCollector', () => {
 	let metricsService: MetricsService, statsD: StatsD;
@@ -30,21 +30,21 @@ describe('CounterCollector', () => {
 		const instance = metricsService.getCounter('test_metric');
 		instance.add(1);
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:1|c');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:1|c');
 	});
 
 	it('should increment counter with tags', () => {
 		const instance = metricsService.getCounter('test_metric');
 		instance.add(1, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:1|c|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:1|c|#tag1:value1,tag2:value2');
 	});
 
 	it('should increment counter with merge tags', () => {
 		const instance = metricsService.getCounter('test_metric', { tags: { tag1: 'value1' } });
 		instance.add(1, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:1|c|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:1|c|#tag1:value1,tag2:value2');
 	});
 
 	it('should throw error when incrementing with negative value', () => {
@@ -53,6 +53,6 @@ describe('CounterCollector', () => {
 	});
 
 	afterEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });
