@@ -1,1 +1,1 @@
-export * from './statsd.provider';
+export * from './statsd.provider.js';

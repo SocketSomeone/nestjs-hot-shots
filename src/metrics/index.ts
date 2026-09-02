@@ -1,2 +1,2 @@
-export * from './collectors';
-export * from './metrics.service';
+export * from './collectors/index.js';
+export * from './metrics.service.js';

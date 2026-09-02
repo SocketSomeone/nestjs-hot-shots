@@ -1,7 +1,7 @@
 import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
-import { TimingCollector, HotShotsModule, MetricsService } from '../../../src';
+import { TimingCollector, HotShotsModule, MetricsService } from '../../../src/index.js';
 
 describe('TimingCollector', () => {
 	let metricsService: MetricsService, statsD: StatsD;
@@ -30,24 +30,24 @@ describe('TimingCollector', () => {
 		const instance = metricsService.getTiming('test_metric');
 		instance.record(10);
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|ms');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|ms');
 	});
 
 	it('should record timing value with tags', () => {
 		const instance = metricsService.getTiming('test_metric');
 		instance.record(10, { tag1: 'value1', tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|ms|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|ms|#tag1:value1,tag2:value2');
 	});
 
 	it('should record timing value with merge tags', () => {
 		const instance = metricsService.getTiming('test_metric', { tags: { tag1: 'value1' } });
 		instance.record(10, { tag2: 'value2' });
 
-		expect(statsD.mockBuffer[0]).toBe('test_metric:10|ms|#tag1:value1,tag2:value2');
+		expect(statsD.mockBuffer![0]).toBe('test_metric:10|ms|#tag1:value1,tag2:value2');
 	});
 
 	afterEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });

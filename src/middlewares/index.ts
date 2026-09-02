@@ -1,1 +1,1 @@
-export * from './http-metrics.middleware';
+export * from './http-metrics.middleware.js';

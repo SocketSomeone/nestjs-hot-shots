@@ -1,6 +1,6 @@
 import { ConfigurableModuleBuilder } from '@nestjs/common';
 
-import { HotShotsModuleOptions } from './hot-shots-options.interface';
+import { HotShotsModuleOptions } from './hot-shots-options.interface.js';
 
 export const { ConfigurableModuleClass, MODULE_OPTIONS_TOKEN } =
 	new ConfigurableModuleBuilder<HotShotsModuleOptions>()

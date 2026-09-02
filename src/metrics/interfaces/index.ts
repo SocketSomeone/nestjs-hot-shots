@@ -1,1 +1,1 @@
-export * from './collector-options.interface';
+export * from './collector-options.interface.js';

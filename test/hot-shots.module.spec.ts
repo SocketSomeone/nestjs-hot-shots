@@ -1,13 +1,15 @@
-const StatsDMock = jest.fn();
+const { StatsDMock } = vi.hoisted(() => ({
+	StatsDMock: vi.fn<(options?: unknown) => void>()
+}));
 
-jest.mock('hot-shots', () => ({
+vi.mock('hot-shots', () => ({
 	StatsD: StatsDMock
 }));
 
 import { Test } from '@nestjs/testing';
 import { StatsD } from 'hot-shots';
 
-import { HotShotsModule } from '../src';
+import { HotShotsModule } from '../src/index.js';
 
 describe('HotShotsModule', () => {
 	beforeEach(() => {

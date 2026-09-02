@@ -8,7 +8,7 @@ import {
 	MetricsService,
 	TimingCollector,
 	UpDownCounterCollector
-} from '../../src';
+} from '../../src/index.js';
 
 describe('MetricsService', () => {
 	let service: MetricsService;
@@ -59,6 +59,6 @@ describe('MetricsService', () => {
 	});
 
 	afterEach(() => {
-		jest.clearAllMocks();
+		vi.clearAllMocks();
 	});
 });
