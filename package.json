@@ -67,7 +67,7 @@
 		"@types/node": "26.6.5",
 		"@types/response-time": "^2.3.8",
 		"@types/supertest": "^7.2.0",
-		"@vitest/coverage-v8": "5.0.4",
+		"@vitest/coverage-v8": "5.0.5",
 		"eslint-plugin-perfectionist": "5.12.1",
 		"eslint-plugin-prettier": "5.5.7",
 		"hot-shots": "17.1.1",
@@ -81,7 +81,7 @@
 		"rxjs": "7.8.2",
 		"supertest": "^7.1.0",
 		"typescript": "7.0.2",
-		"vitest": "5.0.4"
+		"vitest": "5.0.5"
 	},
 	"peerDependencies": {
 		"@nestjs/common": "^10.2.0 || ^11.0.0 || ^12.0.0",
