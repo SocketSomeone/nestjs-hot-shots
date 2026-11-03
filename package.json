@@ -70,7 +70,7 @@
 		"@vitest/coverage-v8": "5.0.5",
 		"eslint-plugin-perfectionist": "5.13.0",
 		"eslint-plugin-prettier": "5.5.7",
-		"hot-shots": "17.1.1",
+		"hot-shots": "18.0.0",
 		"husky": "9.1.7",
 		"oxlint": "1.90.0",
 		"oxlint-tsgolint": "7.0.2005",
